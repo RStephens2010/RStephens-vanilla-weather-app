@@ -1,5 +1,8 @@
 .container {
   max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #dadde1;
 }
 
 h1 {
