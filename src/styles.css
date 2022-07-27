@@ -2,14 +2,6 @@ body {
   font-family: arial, sans-serif;
 }
 
-.container {
-  max-width: 600px;
-  margin: 30px auto;
-  padding: 20px;
-  border: 1px solid #dadde1;
-  border-radius: 5px;
-}
-
 h1 {
   color: rgb(135, 135, 135);
   text-align: center;
@@ -53,4 +45,19 @@ p {
 
 .weather-forecast-temperature-min {
   opacity: 0.5;
+}
+
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.weather-app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 5px;
+  text-align: center;
 }

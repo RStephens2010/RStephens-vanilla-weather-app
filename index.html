@@ -19,87 +19,90 @@
 
   <body>
     <div class="container">
-      <form class="search-form" id="search-form">
-        <div class="row">
-          <div class="col-9">
-            <input
-              type="search"
-              placeholder="Type a city..."
-              autofocus="on"
-              autocomplete="off"
-              id="city-input"
-              class="form-control"
-            />
-          </div>
-          <div class="col-3">
-            <input type="submit" value="Search" class="form-control" />
-          </div>
-          <div class="col-3">
-            <button class="btn btn-success" id="current-location-button">
-              Current City
-            </button>
-          </div>
-        </div>
-      </form>
-
-      <br />
-
-      <div class="container">
-        <h1 id="city">San Francisco, California</h1>
-
-        <br />
-
-        <center>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 id="date"></h5>
-                  <ul>
-                    <li id="date"></li>
-                  </ul>
-                  <p id="description"></p>
-                  <br />
-                  <h5 class="card-title">Temperature:</h5>
-                  <p class="card-text"><span id="temperature"></span>°F</p>
-                </div>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form class="search-form" id="search-form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city..."
+                  autofocus="on"
+                  autocomplete="off"
+                  id="city-input"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-3">
+                <input type="submit" value="Search" class="form-control" />
+              </div>
+              <div class="col-3">
+                <button class="btn btn-success" id="current-location-button">
+                  Current City
+                </button>
               </div>
             </div>
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Humidity:</h5>
-                  <p class="card-text"><span id="humidity"></span>%</p>
-                  <h5 class="card-title">Wind Speed:</h5>
-                  <p class="card-text"><span id="wind"></span>mph</p>
+          </form>
+
+          <br />
+
+          <div class="container">
+            <h1 id="city">San Francisco, California</h1>
+
+            <br />
+
+            <center>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 id="date"></h5>
+                      <ul>
+                        <li id="date"></li>
+                      </ul>
+                      <p id="description"></p>
+                      <br />
+                      <h5 class="card-title">Temperature:</h5>
+                      <p class="card-text"><span id="temperature"></span>°F</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Humidity:</h5>
+                      <p class="card-text"><span id="humidity"></span>%</p>
+                      <h5 class="card-title">Wind Speed:</h5>
+                      <p class="card-text"><span id="wind"></span>mph</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </center>
+            </center>
 
-        <br />
+            <br />
 
-        <h1>Extended forecast</h1>
+            <h1>Extended forecast</h1>
 
-        <br />
+            <br />
 
-        <div class="weather-forecast">
-          <div class="row">
-            <div class="col-2">
-              <div class="weather-forecast-date">
-                Thu
-              </div>
-              <i class="fa-solid fa-sun sun-icon"></i>
-              <div class="weather-forecast-temperature">
-                <span class="weather-forecast-temperature-max">75°</span>
-                <span class="weather-forecast-temperature-min">55°</span>
+            <div class="weather-forecast">
+              <div class="row">
+                <div class="col-2">
+                  <div class="weather-forecast-date">
+                    Thu
+                  </div>
+                  <i class="fa-solid fa-sun sun-icon"></i>
+                  <div class="weather-forecast-temperature">
+                    <span class="weather-forecast-temperature-max">75°</span>
+                    <span class="weather-forecast-temperature-min">55°</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <br />
       <p>
         <a
           href="https://github.com/RStephens2010/R-Stephens-Weather-App"
