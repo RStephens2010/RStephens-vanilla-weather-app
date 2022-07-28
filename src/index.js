@@ -62,17 +62,20 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  let celsiusTemperature = (fahrenheitTemperature − 32) * 5 / 9;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature); 
+}
+
+let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
+
+function displayCelsiusTemperature(event) {
+  console.log("sdhfsjd");
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let celsiusTemperature = ((fahrenheitTemperature − 32) * 5) / 9;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 function searchLocation(position) {
