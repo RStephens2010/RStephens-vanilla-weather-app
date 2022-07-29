@@ -54,7 +54,6 @@ p {
 }
 
 .weather-app-wrapper {
-  max-width: 600px;
   margin: 30px auto;
   text-align: center;
 }
