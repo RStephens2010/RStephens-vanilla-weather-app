@@ -65,7 +65,7 @@ function handleSubmit(event) {
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature); 
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
@@ -74,7 +74,7 @@ function displayCelsiusTemperature(event) {
   console.log("sdhfsjd");
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  let celsiusTemperature = ((fahrenheitTemperature − 32) * 5) / 9;
+  let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
