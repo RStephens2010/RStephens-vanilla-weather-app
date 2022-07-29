@@ -117,3 +117,5 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 searchCity("San Francisco");
+
+displayForecast();
