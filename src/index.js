@@ -1,22 +1,25 @@
-function formatDate(date) {
-  let dateElement = document.querySelector("#date");
-  let currentTime = new Date();
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
-
   let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
 
-  let dayIndex = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
-  let day = days[dayIndex];
-
-  return `${days[dayIndex]} ${hours}:${minutes}`;
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
 }
 
 function getForecast(coordinates) {
@@ -28,24 +31,28 @@ function getForecast(coordinates) {
 
 function displayForecast(response) {
   console.log(response.data.daily);
-  let forecastDays = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun"];
 
-  forecastDays.forEach(function (day) {
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
-      `<div class="weather-forecast" id="forecast">
-    <div class="col-2">
-      <div class="weather-forecast-date">
-      ${day}</div>
-      <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" width="42" />
-      <div class="weather-forecast-temperature">
-      <span class="weather-forecast-temperature-max">18°</span> <span class="weather-forecast-temperature-min">12°</span>
+      `
+      <div class="col-2">
+        <div class="weather-forecast-date">${day}</div>
+        <img
+          src="http://openweathermap.org/img/wn/50d@2x.png"
+          alt=""
+          width="42"
+        />
+        <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max"> 65° </span>
+          <span class="weather-forecast-temperature-min"> 60° </span>
+        </div>
       </div>
-    </div>
-</div>`;
+  `;
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -56,6 +63,7 @@ function displayForecast(response) {
 
 function displayWeatherCondition(response) {
   console.log(response.data);
+
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
