@@ -12,15 +12,7 @@ function formatDate(date) {
   }
 
   let dayIndex = date.getDay();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
-  ];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   let day = days[dayIndex];
 
@@ -35,13 +27,13 @@ function getForecast(coordinates) {
 }
 
 function displayForecast(response) {
-  console.log(reponse.data.daily);
+  console.log(response.data.daily);
+  let forecastDays = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
 
-  let days = ["Thu", "Fri", "Sat", "Sun"];
-  days.forEach(function (day) {
+  forecastDays.forEach(function (day) {
     forecastHTML =
       forecastHTML +
       `<div class="weather-forecast" id="forecast">
@@ -85,7 +77,7 @@ function displayWeatherCondition(response) {
   fahrenheitTemperature = response.data.main.temp;
 
   console.log(response.data);
-  getForecast(response.data.coordinates);
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
